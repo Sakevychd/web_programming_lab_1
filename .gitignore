@@ -15,3 +15,17 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+# Ігнорування папки з зібраними файлами Maven
+target/
+
+# Логи та кеш
+*.log
+*.tmp
+*.out
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# MacOS файли
+.DS_Store
