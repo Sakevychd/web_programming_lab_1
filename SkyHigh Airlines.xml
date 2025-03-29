@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<airline>
+    <name>SkyHigh Airlines</name>
+    <planes>
+        <plane>
+            <mileage>15000</mileage>
+            <fuelLevel>8000.0</fuelLevel>
+            <manufacturer>
+                <country>USA</country>
+                <name>Boeing</name>
+            </manufacturer>
+            <model>737</model>
+        </plane>
+        <plane>
+            <mileage>30000</mileage>
+            <fuelLevel>10000.0</fuelLevel>
+            <manufacturer>
+                <country>France</country>
+                <name>Airbus</name>
+            </manufacturer>
+            <model>A320</model>
+        </plane>
+    </planes>
+    <planesCount>2</planesCount>
+</airline>
