@@ -1,3 +1,5 @@
+package com.example;
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -34,3 +36,4 @@ public class PlaneTest {
         assertEquals(p1, p2); // бо модель і виробник однакові
     }
 }
+

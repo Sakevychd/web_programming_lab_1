@@ -1,3 +1,5 @@
+package com.example;
+
 import java.util.Objects;
 
 public class Manufacturer {
@@ -18,14 +20,18 @@ public class Manufacturer {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Manufacturer)) return false;
-        Manufacturer that = (Manufacturer) o;
+        if (!(o instanceof Manufacturer that)) return false;
         return Objects.equals(name, that.name) &&
-               Objects.equals(country, that.country);
+                Objects.equals(country, that.country);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(name, country);
+    }
+
+    @Override
+    public String toString() {
+        return name + " (" + country + ")";
     }
 }

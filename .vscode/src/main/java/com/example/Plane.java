@@ -1,3 +1,5 @@
+package com.example;
+
 import java.util.Objects;
 
 public class Plane {
@@ -32,7 +34,6 @@ public class Plane {
         fuelLevel = maxFuel;
     }
 
-    // Геттери та сеттери
     public String getModel() { return model; }
     public void setModel(String model) { this.model = model; }
 
@@ -45,14 +46,23 @@ public class Plane {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Plane)) return false;
-        Plane plane = (Plane) o;
+        if (!(o instanceof Plane plane)) return false;
         return Objects.equals(model, plane.model) &&
-               Objects.equals(manufacturer, plane.manufacturer);
+                Objects.equals(manufacturer, plane.manufacturer);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(model, manufacturer);
+    }
+
+    @Override
+    public String toString() {
+        return "Plane{" +
+                "model='" + model + '\'' +
+                ", manufacturer=" + manufacturer +
+                ", fuelLevel=" + fuelLevel +
+                ", mileage=" + mileage +
+                '}';
     }
 }

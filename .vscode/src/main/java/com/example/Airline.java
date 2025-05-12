@@ -1,3 +1,5 @@
+package com.example;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -27,12 +29,10 @@ public class Airline {
         return name;
     }
 
-    // equals and hashCode
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Airline)) return false;
-        Airline airline = (Airline) o;
+        if (!(o instanceof Airline airline)) return false;
         return Objects.equals(name, airline.name);
     }
 

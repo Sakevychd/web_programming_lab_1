@@ -1,3 +1,5 @@
+package com.example;
+
 import java.io.File;
 import java.util.*;
 
@@ -94,7 +96,7 @@ public class Main {
 
     private static void exportPlanes() {
         try {
-            DataManager.exportPlanesToFile(airline.getPlanes(), new File("planes.json"));
+            DataManager.exportToFile(airline.getPlanes(), new File("planes.json"));
             System.out.println("Експорт виконано.");
         } catch (Exception e) {
             System.out.println("Помилка експорту: " + e.getMessage());
@@ -103,7 +105,7 @@ public class Main {
 
     private static void importPlanes() {
         try {
-            List<Plane> imported = DataManager.importPlanesFromFile(new File("planes.json"));
+            List<Plane> imported = DataManager.importFromFile(new File("planes.json"));
             for (Plane p : imported) {
                 airline.addPlane(p);
             }
