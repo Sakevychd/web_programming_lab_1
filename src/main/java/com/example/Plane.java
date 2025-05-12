@@ -9,6 +9,9 @@ public class Plane {
     private int mileage;
     private final double maxFuel = 15000;
 
+    public Plane() {
+    }
+
     public Plane(String model, Manufacturer manufacturer, double fuelLevel, int mileage) {
         this.model = model;
         this.manufacturer = manufacturer;

@@ -4,6 +4,8 @@ import java.io.File;
 import java.util.*;
 
 public class Main {
+
+    
     private static final Scanner scanner = new Scanner(System.in);
     private static final Airline airline = new Airline("My Airline");
 
@@ -105,13 +107,19 @@ public class Main {
 
     private static void importPlanes() {
         try {
-            List<Plane> imported = DataManager.importFromFile(new File("planes.json"));
+            File importFile = new File("planesimport.json"); // <-- інший файл
+    
+            List<Plane> imported = DataManager.importFromFile(importFile);
+    
             for (Plane p : imported) {
                 airline.addPlane(p);
             }
-            System.out.println("Імпорт виконано.");
+    
+            System.out.println("✅ Імпорт з 'planesimport.json' завершено. Додано " + imported.size() + " літаків.");
         } catch (Exception e) {
-            System.out.println("Помилка імпорту: " + e.getMessage());
+            System.out.println("❌ Помилка імпорту: " + e.getMessage());
+            e.printStackTrace();
         }
     }
+    
 }

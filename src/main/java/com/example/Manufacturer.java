@@ -5,6 +5,8 @@ import java.util.Objects;
 public class Manufacturer {
     private String name;
     private String country;
+    public Manufacturer() {
+    }
 
     public Manufacturer(String name, String country) {
         this.name = name;
